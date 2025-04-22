@@ -52,7 +52,7 @@ if(isset($_POST['koreksi'])){
       <form action="" method="POST" enctype="multipart/form-data">
         <div class="card-header">
           <h3 class="card-title">
-            <i class="fas fa-plus fa-sm"></i> Add User
+            <i class="fas fa-pen fa-sm"></i> Edit User
           </h3>
           <button type="submit" name="koreksi" class="btn btn-primary btn-sm float-right">
             <i class="fas fa-save"></i> Koreksi
