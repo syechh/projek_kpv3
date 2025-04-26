@@ -1,5 +1,12 @@
 <?php
 
+session_start();
+
+if(isset($_SESSION["ssLoginPOS"])){
+  header("location: ../dashboard.php"); 
+  exit();
+}
+
 require "../config/config.php";
 
 
@@ -13,6 +20,11 @@ if (isset($_POST['login'])){
     if (mysqli_num_rows($queryLogin) === 1){
       $row = mysqli_fetch_assoc($queryLogin);
       if (password_verify($password, $row['password'])){
+
+        //set session
+        $_SESSION["ssLoginPOS"] = true;
+        $_SESSION["ssUserPOS"] = $username;
+
         header("location: ../dashboard.php");
         exit();
       }else{
