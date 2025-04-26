@@ -1,6 +1,14 @@
 <?php
 
+session_start();
+
+if(!isset($_SESSION["ssLoginPOS"])){
+  header("location: auth/login.php");
+  exit();
+}
+
 require "config/config.php";
+require "config/functions.php";
 
 
 $title = "Dashboard - UD MUTIARA";
@@ -60,21 +68,6 @@ require "templates/sidebar.php";
               </div>
               <div class="icon">
                 <i class="ion ion-android-bus"></i>
-              </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-warning">
-              <div class="inner">
-                <h3>0</h3>
-
-                <p>Customer</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-person-stalker"></i>
               </div>
               <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
