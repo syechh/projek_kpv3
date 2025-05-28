@@ -30,6 +30,43 @@
   $(function(){
       $('#tblData').DataTable();
   })
+
+  const toggleBtn = document.getElementById('darkModeToggle');
+  const body = document.body;
+  const navbar = document.getElementById('navbar');
+  const icon = toggleBtn.querySelector('i');
+
+  function updateDarkMode(isDark) {
+    if (isDark) {
+      body.classList.add('dark-mode');
+      navbar.classList.remove('navbar-light', 'bg-light');
+      navbar.classList.add('navbar-dark', 'bg-dark');
+      icon.classList.remove('fa-moon');
+      icon.classList.add('fa-sun');
+      localStorage.setItem('darkMode', 'on');
+    } else {
+      body.classList.remove('dark-mode');
+      navbar.classList.remove('navbar-dark', 'bg-dark');
+      navbar.classList.add('navbar-light', 'bg-light');
+      icon.classList.remove('fa-sun');
+      icon.classList.add('fa-moon');
+      localStorage.setItem('darkMode', 'off');
+    }
+  }
+
+  // Saat halaman load
+  const savedMode = localStorage.getItem('darkMode');
+  if (savedMode === 'on') {
+    updateDarkMode(true);
+  } else {
+    updateDarkMode(false);
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    const isDark = !body.classList.contains('dark-mode');
+    updateDarkMode(isDark);
+  });
+
 </script>
 
 </body>
