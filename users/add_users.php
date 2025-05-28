@@ -1,12 +1,20 @@
 <?php
+
+session_start();
+
+if(!isset($_SESSION["ssLoginPOS"])){
+  header("location: ../auth/login.php");
+  exit();
+}
+
 require "../config/config.php";
 require "../config/functions.php";
 require "../module/mode-user.php";
 
 $title = "Tambah User";
-require "../templates/header.php";
-require "../templates/navbar.php";
-require "../templates/sidebar.php";
+require "../templatess/header.php";
+require "../templatess/navbar.php";
+require "../templatess/sidebar.php";
 
 if(isset($_POST['simpan'])) {
     if (insert($_POST) > 0) {
@@ -77,8 +85,9 @@ if(isset($_POST['simpan'])) {
                 <select name="level" id="level" class="form-control" required>
                     <option value="">-- Level User --</option>
                     <option value="1">Administrator</option>
-                    <option value="2">Supervisor</option>
-                    <option value="3">Operator</option>
+                    <option value="2">Owner</option>
+                    <option value="3">Kasir</option>
+                    <option value="4">Karyawan</option>
                 </select>
               </div>
               <div class="form-group">
@@ -103,5 +112,5 @@ if(isset($_POST['simpan'])) {
 <!-- /.content-wrapper -->
 
 <?php
-require "../templates/footer.php";
+require "../templatess/footer.php";
 ?>

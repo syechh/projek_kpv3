@@ -12,9 +12,9 @@ require "../config/functions.php";
 require "../module/mode-barang.php";
 
 $title = "Form Barang - Toko Bangunan Mutiara";
-require "../templates/header.php";
-require "../templates/navbar.php";
-require "../templates/sidebar.php";
+require "../templatess/header.php";
+require "../templatess/navbar.php";
+require "../templatess/sidebar.php";
 
 if(isset($_GET['msg'])){
   $msg = $_GET['msg'];
@@ -119,11 +119,13 @@ if(isset($_POST['simpan'])){
                           }
                       } else { ?>
                           <option value="">-- Satuan Barang --</option>
-                          <option value="item/piece">item/piece</option>
+                          <option value="item/piece">buah</option>
+                          <option value="bungkus">bungkus</option>
                           <option value="meter">meter</option>
                           <option value="kg">kg</option>
                           <option value="sak">sak</option>
                           <option value="liter"> liter</option>
+                          <option value="kubik"> kubik</option>
                           <option value="dus/karton">dus/karton</option>
                           <option value="lembar">lembar</option>
                           <option value="batang">batang</option>
@@ -164,6 +166,6 @@ if(isset($_POST['simpan'])){
 
 <?php
 
-require "../templates/footer.php"
+require "../templatess/footer.php"
 
 ?>

@@ -82,7 +82,7 @@ function update($data){
     $gambar = mysqli_real_escape_string($koneksi, $_FILES['foto']['name']);
 
     //cek barcode lama
-    $queryBarcode = mysqli_query($koneksi, "SELECT * FROM barang WHERE barcode = '$barcode'");
+    $queryBarcode = mysqli_query($koneksi, "SELECT * FROM barang WHERE id_barang = '$id'");
     $dataBrg      = mysqli_fetch_assoc($queryBarcode);
     $curBarcode   = $dataBrg['barcode'];
 
@@ -109,7 +109,7 @@ function update($data){
             $nmgbr = $id . '-' . rand(10, 10000);
         }
 
-        $imgBrg = uploadimg(null, $id);
+        $imgBrg = uploadimg($url, $nmgbr);
         if($gbrLama != 'default-brg.png') {
             @unlink('../assets/images/'.$gbrLama);
         }
@@ -129,4 +129,16 @@ function update($data){
                 ");
     return mysqli_affected_rows($koneksi);
 
+}
+
+function jualBarang($id_barang, $qty) {
+    global $koneksi;
+    
+    // Hitung harga pokok penjualan dengan FIFO
+    $hpp = applyFIFO($id_barang, $qty);
+    
+    // Kurangi stok barang
+    mysqli_query($koneksi, "UPDATE barang SET stock = stock - $qty WHERE id_barang = '$id_barang'");
+    
+    return $hpp;
 }

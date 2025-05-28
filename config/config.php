@@ -5,7 +5,7 @@ date_default_timezone_set('Asia/Jakarta');
 $host   = 'localhost';
 $user   = 'root';
 $pass   = '';
-$db     = 'ud_mutiara2';
+$db     = 'ud_mutiara';
 
 $koneksi    = mysqli_connect($host, $user, $pass, $db);
 
@@ -17,4 +17,4 @@ $koneksi    = mysqli_connect($host, $user, $pass, $db);
 //     echo "Koneksi Berhasil";
 // }
 
-$main_url = 'http://localhost/kp_fix/';
+$main_url = 'http://localhost/projek_kp/';

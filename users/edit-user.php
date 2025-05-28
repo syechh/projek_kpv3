@@ -1,12 +1,20 @@
 <?php
+
+session_start();
+
+if(!isset($_SESSION["ssLoginPOS"])){
+  header("location: ../auth/login.php");
+  exit();
+}
+
 require "../config/config.php";
 require "../config/functions.php";
 require "../module/mode-user.php";
 
 $title = "Update User TB - MUTIARA";
-require "../templates/header.php";
-require "../templates/navbar.php";
-require "../templates/sidebar.php";
+require "../templatess/header.php";
+require "../templatess/navbar.php";
+require "../templatess/sidebar.php";
 
 $id = $_GET['id'];
 
@@ -78,8 +86,8 @@ if(isset($_POST['koreksi'])){
                 <select name="level" id="level" class="form-control" required>
                     <option value="">-- Level User --</option>
                     <option value="1" <?= selectUser1($level) ?>>Administrator</option>
-                    <option value="2" <?= selectUser2($level) ?>>Supervisor</option>
-                    <option value="3" <?= selectUser3($level) ?>>Operator</option>
+                    <option value="2" <?= selectUser2($level) ?>>Owner</option>
+                    <option value="3" <?= selectUser3($level) ?>>Kasir</option>
                 </select>
               </div>
               <div class="form-group">
@@ -105,5 +113,5 @@ if(isset($_POST['koreksi'])){
 <!-- /.content-wrapper -->
 
 <?php
-require "../templates/footer.php";
+require "../templatess/footer.php";
 ?>

@@ -1,5 +1,10 @@
 <?php
 
+if(userLogin()['level'] != 1){
+    header("location:" . $main_url . "error-page.php");
+    exit();
+}
+
 function insert($data){
     global $koneksi;
 
@@ -80,6 +85,15 @@ function selectUser2($level){
 function selectUser3($level){
     $result = null;
     if($level == 3){
+        $result = "selected";
+    }
+    return $result;
+}
+
+//karyawan
+function selectUser4($level){
+    $result = null;
+    if($level == 4){
         $result = "selected";
     }
     return $result;

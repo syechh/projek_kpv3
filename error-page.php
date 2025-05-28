@@ -12,9 +12,9 @@ require "config/functions.php";
 
 
 $title = "Error Page - Toko Bangunan MUTIARA";
-require "templates/header.php";
-require "templates/navbar.php";
-require "templates/sidebar.php";
+require "templatess/header.php";
+require "templatess/navbar.php";
+require "templatess/sidebar.php";
 
 ?>
   <!-- Content Wrapper. Contains page content -->
@@ -58,6 +58,6 @@ require "templates/sidebar.php";
     
 <?php
 
-require "templates/footer.php";
+require "templatess/footer.php";
 
 ?>

@@ -1,13 +1,20 @@
 <?php
 
+session_start();
+
+if(!isset($_SESSION["ssLoginPOS"])){
+  header("location: ../auth/login.php");
+  exit();
+}
+
 require "../config/config.php";
 require "../config/functions.php";
 require "../module/mode-user.php";
 
 $title = "Users - Tb Mutiara";
-require "../templates/header.php";
-require "../templates/navbar.php";
-require "../templates/sidebar.php";
+require "../templatess/header.php";
+require "../templatess/navbar.php";
+require "../templatess/sidebar.php";
 
 
 ?>
@@ -61,8 +68,7 @@ require "../templates/sidebar.php";
                         foreach($users as $user) : ?>
                             <tr>
                                 <td><?= $no++ ?></td>
-                                <td><img src="../assets/images/<?= 
-                                $user['foto'] ?>" 
+                                <td><img src="../assets/images/<?= $user['foto'] ?>" 
                                 class="rounded-circle" alt="" 
                                 width="60px"></td>
                                 <td><?= $user['username'] ?></td>
@@ -73,9 +79,11 @@ require "../templates/sidebar.php";
                                     if ($user['level'] == 1){
                                         echo "Administator";
                                     }else if ($user['level'] == 2){
-                                        echo "Kasir (Supervisor)";
+                                        echo "Owner";
+                                    }else if ($user['level'] == 3){
+                                        echo "Kasir";
                                     }else{
-                                        echo "Owner (Operator)";
+                                      echo "Karyawan";
                                     }
                                     ?>
                                 </td>
@@ -95,6 +103,6 @@ require "../templates/sidebar.php";
 
 <?php
 
-require "../templates/footer.php";
+require "../templatess/footer.php";
 
 ?>
