@@ -207,7 +207,7 @@ $totals = array_map('intval', array_column($penjualanData, 'total_harian'));
                 <!-- Dropdown periode -->
                 <form method="GET" style="margin-bottom: 15px;">
                   <label for="periode">Pilih Periode:</label>
-                  <select name="periode" id="periode" onchange="this.form.submit()" class="form-control col-2">
+                  <select name="periode" id="periode" onchange="this.form.submit()" class="form-control col-sm-2">
                     <option value="harian" <?= $periode == 'harian' ? 'selected' : '' ?>>Harian</option>
                     <option value="mingguan" <?= $periode == 'mingguan' ? 'selected' : '' ?>>Mingguan</option>
                     <option value="bulanan" <?= $periode == 'bulanan' ? 'selected' : '' ?>>Bulanan</option>
