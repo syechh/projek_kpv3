@@ -1,5 +1,6 @@
 <!-- Navbar -->
-<nav class="main-header navbar navbar-expand navbar-white navbar-light">
+<nav class="main-header navbar navbar-expand navbar-light bg-light" id="navbar">
+
   <!-- Left navbar links -->
   <ul class="navbar-nav">
     <li class="nav-item">
@@ -14,6 +15,7 @@
         <i class="fas fa-expand-arrows-alt"></i>
       </a>
     </li>
+      <button id="darkModeToggle" class="btn btn-sm btn-outline-dark ml-auto"><i class="fas fa-moon"></i></button>
     <ul class="navbar-nav ml-auto">
       <li class="nav-item dropdown">
         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
@@ -29,8 +31,8 @@
             <a href="<?= $main_url ?>auth/logout.php" class="dropdown-item text-right">
                 Logout <i class="fas fa-sign-out-alt"></i>
             </a>
-        </div>
-      </li>
+          </div>
+        </li>
     </ul>
   </ul>
 </nav>

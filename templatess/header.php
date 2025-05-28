@@ -8,8 +8,8 @@
   
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="<?php echo $main_url ?>assets/adminLTE-3.2.0/plugins/fontawesome-free/css/all.min.css">
+  <!-- Tambahkan font awesome (kalau belum) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <!-- DataTables -->
   <link rel="stylesheet" href="<?php echo $main_url ?>assets/adminLTE-3.2.0/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
   <!-- SweetAlert2 -->
@@ -26,5 +26,26 @@
   <link rel="stylesheet" href="<?php echo $main_url ?>assets/adminLTE-3.2.0/dist/css/adminlte.min.css">
   <link rel="shortcut icon" href="<?php echo $main_url ?>assets/images/cart.png">
 </head> 
-<body class="hold-transition sidebar-mini">
+<style>
+  body {
+  transition: background-color 0.3s, color 0.3s;
+  }
+
+  body.dark-mode {
+    background-color: #121212;
+    color: #eee;
+  }
+
+  body.dark-mode .main-header.navbar {
+    background-color: #343a40 !important;
+    color: #fff !important;
+  }
+
+  body.dark-mode .main-header.navbar .btn {
+    color: #fff !important;
+    border-color: #fff !important;
+  }
+
+</style>
+<body class="hold-transition sidebar-mini dark-mode">
 <div class="wrapper"></div>
