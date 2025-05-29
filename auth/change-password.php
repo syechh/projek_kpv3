@@ -12,9 +12,9 @@ require "../config/functions.php";
 require "../module/mode-password.php";
 
 $title = "Ganti Password - Toko Bangunan Mutiara";
-require "../templates/header.php";
-require "../templates/navbar.php";
-require "../templates/sidebar.php";
+require "../templatess/header.php";
+require "../templatess/navbar.php";
+require "../templatess/sidebar.php";
 
 //update password
 if(isset($_POST['simpan'])){
@@ -99,6 +99,6 @@ $alert2 = '<small class="text-danger pl-2 font-italic">Password Saat ini tidak s
 
 <?php
 
-require "../templates/footer.php";
+require "../templatess/footer.php";
 
 ?>
