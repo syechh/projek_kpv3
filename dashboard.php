@@ -202,25 +202,43 @@ $totals = array_map('intval', array_column($penjualanData, 'total_harian'));
       <!-- chart -->
         <section class="content">
           <div class="container-fluid">
-            <div class="card card-outline card-primary">
-              <div class="card-header">
-                <!-- Dropdown periode -->
-                <form method="GET" style="margin-bottom: 15px;">
-                  <label for="periode">Pilih Periode:</label>
-                  <select name="periode" id="periode" onchange="this.form.submit()" class="form-control col-sm-2">
-                    <option value="harian" <?= $periode == 'harian' ? 'selected' : '' ?>>Harian</option>
-                    <option value="mingguan" <?= $periode == 'mingguan' ? 'selected' : '' ?>>Mingguan</option>
-                    <option value="bulanan" <?= $periode == 'bulanan' ? 'selected' : '' ?>>Bulanan</option>
-                  </select>
-                </form>
-                <h5 class="card-title">Grafik Total Penjualan per <?= ucfirst($periode) ?></h5>
+            <div class="row">
+              <!-- Line Chart -->
+              <div class="col-md-6">
+                <div class="card card-outline card-primary">
+                  <div class="card-header">
+                    <!-- Dropdown periode -->
+                    <form method="GET" style="margin-bottom: 15px;">
+                      <label for="periode">Pilih Periode:</label>
+                      <select name="periode" id="periode" onchange="this.form.submit()" class="form-control col-sm-6">
+                        <option value="harian" <?= $periode == 'harian' ? 'selected' : '' ?>>Harian</option>
+                        <option value="mingguan" <?= $periode == 'mingguan' ? 'selected' : '' ?>>Mingguan</option>
+                        <option value="bulanan" <?= $periode == 'bulanan' ? 'selected' : '' ?>>Bulanan</option>
+                      </select>
+                    </form>
+                    <h5 class="card-title">Grafik Total Penjualan per <?= ucfirst($periode) ?></h5>
+                  </div>
+                  <div class="card-body">
+                    <canvas id="lineChartPenjualan" height="200"></canvas>
+                  </div>
+                </div>
               </div>
-              <div class="card-body">
-                <canvas id="lineChartPenjualan" height="100"></canvas>
+
+              <!-- Pie Chart -->
+              <div class="col-md-6">
+                <div class="card card-outline card-success">
+                  <div class="card-header">
+                    <h5 class="card-title">Produk Terlaris</h5>
+                  </div>
+                  <div class="card-body">
+                    <canvas id="pieChartProduk" height="200"></canvas>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </section>
+
         <?php
         }
         ?>
@@ -249,6 +267,43 @@ $totals = array_map('intval', array_column($penjualanData, 'total_harian'));
       scales: {
         y: {
           beginAtZero: true
+        }
+      }
+    }
+  });
+
+  //script chart produk
+  const pieCtx = document.getElementById('pieChartProduk').getContext('2d');
+  const pieChart = new Chart(pieCtx, {
+    type: 'doughnut',
+    data: {
+      labels: <?= json_encode($produkTerlarisLabels) ?>,
+      datasets: [{
+        label: 'Produk Terlaris',
+        data: <?= json_encode($produkTerlarisData) ?>,
+        backgroundColor: [
+          '#FF6384', '#36A2EB', '#FFCE56',
+          '#4BC0C0', '#9966FF', '#FF9F40',
+          '#C9CBCF', '#46BFBD', '#FDB45C', '#949FB1'
+        ],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'bottom'
+        },
+        tooltip: {
+          callbacks: {
+            label: function(context) {
+              let total = context.dataset.data.reduce((a, b) => a + b, 0);
+              let value = context.raw;
+              let percent = ((value / total) * 100).toFixed(1);
+              return `${context.label}: ${value} (${percent}%)`;
+            }
+          }
         }
       }
     }
