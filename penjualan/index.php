@@ -361,62 +361,64 @@ $barang_list = getData($query_barang);
                     </table>
                 </div>
                 
-                <div class="row">
-                    <div class="col-lg-4 p-2">
-                        <div class="form-group row mb-2">
-                            <label for="customer" class="col-sm-3 form-label col-form-label-sm">Customer</label>
-                            <div class="col-sm-9">
-                                <div class="input-group mb-2">
-                                    <input type="text" class="form-control form-control-sm" id="searchCustomer" 
-                                           placeholder="Cari customer..." value="<?= $search_customer ?>">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-sm btn-outline-secondary" type="button" id="btnSearchCustomer">
-                                            <i class="fas fa-search"></i>
-                                        </button>
-                                        <a href="#" class="btn btn-sm btn-outline-primary ml-1" data-toggle="modal" data-target="#customerModal">
-                                            <i class="fas fa-plus"></i>
-                                        </a>
+                <div class="card card pt-1 pb-2 px-3">
+                    <div class="row">
+                        <div class="col-lg-4 p-2">
+                            <div class="form-group row mb-2">
+                                <label for="customer" class="col-sm-3 form-label col-form-label-sm">Customer</label>
+                                <div class="col-sm-9">
+                                    <div class="input-group mb-2">
+                                        <input type="text" class="form-control form-control-sm" id="searchCustomer" 
+                                            placeholder="Cari customer..." value="<?= $search_customer ?>">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-sm btn-outline-secondary" type="button" id="btnSearchCustomer">
+                                                <i class="fas fa-search"></i>
+                                            </button>
+                                            <a href="#" class="btn btn-sm btn-outline-primary ml-1" data-toggle="modal" data-target="#customerModal">
+                                                <i class="fas fa-plus"></i>
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
-                                <select name="customer" id="customer" class="form-control form-control-sm">
-                                    <?php
-                                    foreach($customers as $customer) {
-                                        ?>
-                                        <option value="<?= $customer['nama'] ?>"><?= $customer['nama'] ?></option>
+                                    <select name="customer" id="customer" class="form-control form-control-sm">
                                         <?php
-                                    }
-                                    ?>
-                                </select>
+                                        foreach($customers as $customer) {
+                                            ?>
+                                            <option value="<?= $customer['nama'] ?>"><?= $customer['nama'] ?></option>
+                                            <?php
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row mb-2">
+                                <label for="ketr" class="col-sm-3 col-form-label">Keterangan</label>
+                                <div class="col-sm-9">
+                                    <textarea name="ketr" id="ketr" class="form-control form-control-sm"></textarea>
+                                </div>
                             </div>
                         </div>
-                        <div class="form-group row mb-2">
-                            <label for="ketr" class="col-sm-3 col-form-label">Keterangan</label>
-                            <div class="col-sm-9">
-                                <textarea name="ketr" id="ketr" class="form-control form-control-sm"></textarea>
+                        
+                        <div class="col-lg-4 py-2 px-3">
+                            <div class="form-group row mb-2">
+                                <label for="bayar" class="col-sm-3 col-form-label">Bayar</label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="bayar" class="form-control form-control-sm text-right formatted-input" id="bayar" placeholder="0" onkeyup="calculateChange()">
+                                </div>
+                            </div>
+                            <div class="form-group row mb-2">
+                                <label for="kembalian" class="col-sm-3 col-form-label">Kembalian</label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="kembalian" class="form-control form-control-sm text-right" id="kembalian" readonly value="0">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div class="col-lg-4 py-2 px-3">
-                        <div class="form-group row mb-2">
-                            <label for="bayar" class="col-sm-3 col-form-label">Bayar</label>
-                            <div class="col-sm-9">
-                                <input type="text" name="bayar" class="form-control form-control-sm text-right formatted-input" id="bayar" placeholder="0" onkeyup="calculateChange()">
-                            </div>
+                        
+                        <div class="col-lg-4 p-2">
+                            <button type="submit" name="simpan_transaksi" id="simpan" class="btn btn-primary btn-sm btn-block"><i class="fa fa-save"></i> Simpan</button>
+                            <button type="button" id="resetBtn" class="btn btn-danger btn-sm btn-block mt-2">
+                                <i class="fa fa-trash"></i> Reset Pembelian
+                            </button>
                         </div>
-                        <div class="form-group row mb-2">
-                            <label for="kembalian" class="col-sm-3 col-form-label">Kembalian</label>
-                            <div class="col-sm-9">
-                                 <input type="text" name="kembalian" class="form-control form-control-sm text-right" id="kembalian" readonly value="0">
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-4 p-2">
-                        <button type="submit" name="simpan_transaksi" id="simpan" class="btn btn-primary btn-sm btn-block"><i class="fa fa-save"></i> Simpan</button>
-                        <button type="button" id="resetBtn" class="btn btn-danger btn-sm btn-block mt-2">
-                            <i class="fa fa-trash"></i> Reset Pembelian
-                        </button>
                     </div>
                 </div>
             </form>

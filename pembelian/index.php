@@ -210,28 +210,30 @@ $noBeli = generateNo();
                     </tbody>
                 </table>
             </div>
-            <div class="row">
-                <div class="col-lg-6 p-2">
-                    <div class="form-group row mb-2">
-                        <label for="supplierName" class="col-sm-3 form-label col-form-label-sm">Supplier</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control form-control-sm" id="supplierName" value="" readonly>
+            <div class="card pt-1 pb-2 px-3">
+                <div class="row">
+                    <div class="col-lg-6 p-2">
+                        <div class="form-group row mb-2">
+                            <label for="supplierName" class="col-sm-3 form-label col-form-label-sm">Supplier</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control form-control-sm" id="supplierName" value="" readonly>
+                            </div>
+                        </div>
+                        <div class="form-group row mb-2">
+                            <label for="ketr" class="col-sm-3 col-form-label">Keterangan</label>
+                            <div class="col-sm-9">
+                                <textarea name="ketr" id="ketr" class="form-control form-control-sm"></textarea>
+                            </div>
                         </div>
                     </div>
-                    <div class="form-group row mb-2">
-                        <label for="ketr" class="col-sm-3 col-form-label">Keterangan</label>
-                        <div class="col-sm-9">
-                            <textarea name="ketr" id="ketr" class="form-control form-control-sm"></textarea>
-                        </div>
+                    <div class="col-lg-6 p-2">
+                        <button type="submit" name="simpan" id="simpan" class="btn btn-primary btn-sm btn-block" <?= empty($brgDetail) ? 'disabled' : '' ?>>
+                            <i class="fa fa-save"></i> Simpan
+                        </button>
+                        <button type="button" id="resetBtn" class="btn btn-danger btn-sm btn-block mt-2">
+                            <i class="fa fa-trash"></i> Reset Pembelian
+                        </button>
                     </div>
-                </div>
-                <div class="col-lg-6 p-2">
-                    <button type="submit" name="simpan" id="simpan" class="btn btn-primary btn-sm btn-block" <?= empty($brgDetail) ? 'disabled' : '' ?>>
-                        <i class="fa fa-save"></i> Simpan
-                    </button>
-                    <button type="button" id="resetBtn" class="btn btn-danger btn-sm btn-block mt-2">
-                        <i class="fa fa-trash"></i> Reset Pembelian
-                    </button>
                 </div>
             </div>
         </form>
