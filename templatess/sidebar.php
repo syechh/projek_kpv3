@@ -108,10 +108,11 @@ ob_start();
         <?php
           if(userLogin()['level'] != 2 && userLogin()['level'] != 3){
         ?>
+        <li class="nav-header">Informasi</li>
         <li class="nav-item">
           <a href="<?= $main_url ?>stockBarang" class="nav-link <?= MenuStockBarang() ?>">
             <i class="nav-icon fas fa-file-invoice"></i>
-            <p>Stok Barang</p>
+            <p>Info Stok Barang</p>
           </a>
         </li>
         <?php
