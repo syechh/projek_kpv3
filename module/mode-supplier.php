@@ -6,17 +6,20 @@ if(userLogin()['level'] == 3){
 
 function insert($data){
     global $koneksi;
-    
+
     $nama = mysqli_real_escape_string($koneksi, $data['nama']);
     $telpon = mysqli_real_escape_string($koneksi, $data['telpon']);
-    $deskripsi = mysqli_real_escape_string($koneksi, $data['ketr']);
-    $alamat = mysqli_real_escape_string($koneksi, $data['alamat']);
-    
+
+    // Cek apakah deskripsi dan alamat kosong/null
+    $deskripsi = !empty($data['ketr']) ? mysqli_real_escape_string($koneksi, $data['ketr']) : '-';
+    $alamat = !empty($data['alamat']) ? mysqli_real_escape_string($koneksi, $data['alamat']) : '-';
+
     $query = "INSERT INTO supplier VALUES (null, '$nama', '$telpon', '$deskripsi', '$alamat')";
     mysqli_query($koneksi, $query);
-    
+
     return mysqli_insert_id($koneksi);
 }
+
 
 // Fungsi untuk menambahkan produk supplier (tanpa harga beli)
 function tambahProdukSupplier($idSupplier, $idBarang) {
