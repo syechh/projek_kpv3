@@ -43,7 +43,7 @@ $stockBrg = getData("SELECT * FROM barang");
                 <h3 class="card-title">
                     <i class="fas fa-list fa-sm"></i> Stok
                 </h3>
-                <a href="<?= $main_url ?>pembelian" class="btn btn-sm btn-outline-primary float-right"><i class="fas fa-plus"> Tambah Barang</i></a>
+                <a href="<?= $main_url ?>pembelian" class="btn btn-sm btn-outline-primary float-right"><i class="fas fa-plus"></i> Tambah Barang</a>
             </div>
             <div class="card-body table-responsive p-3">
                 <table class="table table-hover text-nowrap" id="tblData">
