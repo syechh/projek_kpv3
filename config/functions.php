@@ -258,5 +258,29 @@ function getPenjualan($periode) {
     }
 }
 
+//chart produk terlaris
+function getProdukTerlaris() {
+  global $koneksi; // pastikan koneksi db tersedia
+
+  $sql = "SELECT nama_brg, SUM(qty) as total_terjual
+          FROM jual_detail
+          GROUP BY nama_brg
+          ORDER BY total_terjual DESC
+          LIMIT 10"; // ambil 10 produk terlaris
+
+  $result = mysqli_query($koneksi, $sql);
+  $produk = [];
+  $jumlah = [];
+
+  while ($row = mysqli_fetch_assoc($result)) {
+    $produk[] = $row['nama_brg'];
+    $jumlah[] = (int)$row['total_terjual'];
+  }
+
+  return [$produk, $jumlah];
+}
+
+list($produkTerlarisLabels, $produkTerlarisData) = getProdukTerlaris();
+
 
 ?>
