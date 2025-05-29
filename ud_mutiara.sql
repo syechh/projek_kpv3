@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 28 Bulan Mei 2025 pada 14.41
+-- Waktu pembuatan: 29 Bulan Mei 2025 pada 07.23
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.2.12
 
@@ -44,29 +44,29 @@ CREATE TABLE `barang` (
 --
 
 INSERT INTO `barang` (`id_barang`, `barcode`, `nama_barang`, `harga_beli`, `harga_jual`, `stock`, `satuan`, `stock_minimal`, `gambar`) VALUES
-('BRG-001', '01', 'paku 5cm', 9000, 12000, 189, 'kg', 10, 'BRG-001-5352.jpeg'),
-('BRG-002', '02', 'semen', 8000, 10000, 187, 'kg', 10, 'default-brg.png'),
-('BRG-003', '40138429', 'lem tembak', 10000, 15000, 21, 'batang', 5, 'default-brg.png'),
-('BRG-004', '29418914', 'hollow 4x2', 45000, 70000, 302, 'batang', 5, 'default-brg.png'),
-('BRG-005', '953428510', 'pasir', 260000, 300000, 0, 'kubik', 3, 'default-brg.png'),
-('BRG-006', '94815209', 'batu split', 280000, 340000, 138, 'kubik', 3, 'default-brg.png'),
-('BRG-007', '0591231943', 'hollow 4x4', 56000, 80000, 203, 'batang', 5, 'default-brg.png'),
-('BRG-008', '51203480', 'paku 3cm', 13000, 20000, 100, 'kg', 3, 'default-brg.png'),
-('BRG-009', '09321432', 'paku 7cm', 12000, 20000, 99, 'kg', 3, 'default-brg.png'),
-('BRG-010', '08051342842', 'paku 10cm', 18000, 25000, 398, 'kg', 3, 'default-brg.png'),
-('BRG-011', '30218002', 'paku 12cm', 20000, 30000, 100, 'kg', 3, 'default-brg.png'),
-('BRG-012', '4908123', 'paku payung 5cm', 15000, 28000, 100, 'kg', 3, 'default-brg.png'),
-('BRG-013', '849132809', 'paku payung 7cm', 15000, 28000, 97, 'kg', 3, 'default-brg.png'),
-('BRG-014', '132094801', 'paku gypsum', 22000, 30000, 179, 'dus/karton', 3, 'default-brg.png'),
-('BRG-015', '480321402', 'paku beton 3cm', 150, 300, 97, 'item/piece', 10, 'default-brg.png'),
-('BRG-016', '4893210491', 'paku beton 5cm', 250, 500, 161, 'item/piece', 10, 'default-brg.png'),
-('BRG-017', '35210840932', 'paku beton 7cm', 350, 700, 300, 'item/piece', 10, 'default-brg.png'),
+('BRG-001', '01', 'paku 5cm', 9000, 12000, 184, 'kg', 10, 'BRG-001-5352.jpeg'),
+('BRG-002', '02', 'semen', 8000, 10000, 300, 'kg', 10, 'default-brg.png'),
+('BRG-003', '40138429', 'lem tembak', 10000, 15000, 299, 'batang', 5, 'default-brg.png'),
+('BRG-004', '29418914', 'hollow 4x2', 45000, 70000, 301, 'batang', 5, 'default-brg.png'),
+('BRG-005', '953428510', 'pasir', 260000, 300000, 224, 'kubik', 3, 'default-brg.png'),
+('BRG-006', '94815209', 'batu split', 280000, 340000, 222, 'kubik', 3, 'default-brg.png'),
+('BRG-007', '0591231943', 'hollow 4x4', 56000, 80000, 198, 'batang', 5, 'default-brg.png'),
+('BRG-008', '51203480', 'paku 3cm', 13000, 20000, 250, 'kg', 3, 'default-brg.png'),
+('BRG-009', '09321432', 'paku 7cm', 12000, 20000, 299, 'kg', 3, 'default-brg.png'),
+('BRG-010', '08051342842', 'paku 10cm', 18000, 25000, 352, 'kg', 3, 'default-brg.png'),
+('BRG-011', '30218002', 'paku 12cm', 20000, 30000, 87, 'kg', 3, 'default-brg.png'),
+('BRG-012', '4908123', 'paku payung 5cm', 15000, 28000, 96, 'kg', 3, 'default-brg.png'),
+('BRG-013', '849132809', 'paku payung 7cm', 15000, 28000, 275, 'kg', 3, 'default-brg.png'),
+('BRG-014', '132094801', 'paku gypsum', 22000, 30000, 159, 'dus/karton', 3, 'default-brg.png'),
+('BRG-015', '480321402', 'paku beton 3cm', 150, 300, 286, 'item/piece', 10, 'default-brg.png'),
+('BRG-016', '4893210491', 'paku beton 5cm', 250, 500, 239, 'item/piece', 10, 'default-brg.png'),
+('BRG-017', '35210840932', 'paku beton 7cm', 350, 700, 236, 'item/piece', 10, 'default-brg.png'),
 ('BRG-018', '471923794', 'paku beton 10cm', 500, 1000, 320, 'item/piece', 10, 'default-brg.png'),
-('BRG-019', '321480890', 'knee 1/2\'', 1500, 3000, 150, 'item/piece', 7, 'default-brg.png'),
-('BRG-020', '8409239189', 'knee 1/4\'', 2000, 5000, 101, 'item/piece', 7, 'default-brg.png'),
+('BRG-019', '321480890', 'knee 1/2\'', 1500, 3000, 130, 'item/piece', 7, 'default-brg.png'),
+('BRG-020', '8409239189', 'knee 1/4\'', 2000, 5000, 113, 'item/piece', 7, 'default-brg.png'),
 ('BRG-021', '480329189', 'knee 1\'', 3500, 6000, 150, 'item/piece', 7, 'default-brg.png'),
-('BRG-022', '0803148901', 'knee 1 1/2\'', 5000, 9000, 151, 'item/piece', 7, 'default-brg.png'),
-('BRG-023', '75218340', 'knee 1 1/4\'', 7000, 12000, 151, 'item/piece', 7, 'default-brg.png'),
+('BRG-022', '0803148901', 'knee 1 1/2\'', 5000, 9000, 163, 'item/piece', 7, 'default-brg.png'),
+('BRG-023', '75218340', 'knee 1 1/4\'', 7000, 12000, 163, 'item/piece', 7, 'default-brg.png'),
 ('BRG-024', '518290321', 'knee 2\'', 8000, 15000, 100, 'item/piece', 7, 'default-brg.png'),
 ('BRG-025', '1428349013', 'knee 2 1/2\'', 10000, 16000, 100, 'item/piece', 7, 'default-brg.png'),
 ('BRG-026', '9012390900', 'knee 3\'', 11000, 17000, 100, 'item/piece', 7, 'default-brg.png'),
@@ -75,32 +75,31 @@ INSERT INTO `barang` (`id_barang`, `barcode`, `nama_barang`, `harga_beli`, `harg
 ('BRG-029', '564321', 'tee 1/4\'', 2000, 5000, 102, 'item/piece', 7, 'default-brg.png'),
 ('BRG-030', '987432', 'knee 3/4\'', 2500, 5500, 100, 'item/piece', 7, 'default-brg.png'),
 ('BRG-031', '76543', 'tee 1\'', 4000, 6000, 108, 'item/piece', 7, 'default-brg.png'),
-('BRG-032', '4563', 'tee 1 1/2\'', 6000, 8000, 0, 'item/piece', 7, 'default-brg.png'),
-('BRG-033', '435687', 'tee 1 1/4\'', 6500, 10000, 0, 'item/piece', 7, 'default-brg.png'),
-('BRG-034', '657890', 'tee 2\'', 9000, 12000, 97, 'item/piece', 7, 'default-brg.png'),
+('BRG-032', '4563', 'tee 1 1/2\'', 6000, 8000, 200, 'item/piece', 7, 'default-brg.png'),
+('BRG-033', '435687', 'tee 1 1/4\'', 6500, 10000, 200, 'item/piece', 7, 'default-brg.png'),
+('BRG-034', '657890', 'tee 2\'', 9000, 12000, 300, 'item/piece', 7, 'default-brg.png'),
 ('BRG-035', '45890', 'tee 2 1/2\'', 11000, 13000, 100, 'item/piece', 7, 'default-brg.png'),
-('BRG-036', '34219', 'tee 3\'', 12000, 15000, 104, 'item/piece', 7, 'default-brg.png'),
+('BRG-036', '34219', 'tee 3\'', 12000, 15000, 103, 'item/piece', 7, 'default-brg.png'),
 ('BRG-037', '56780', 'tee 4', 14000, 20000, 177, 'item/piece', 7, 'default-brg.png'),
 ('BRG-038', '78065', 'sox 1/2\'', 1500, 4000, 100, 'item/piece', 7, 'default-brg.png'),
-('BRG-039', '45670', 'sox 3/4\'', 2000, 5000, 99, 'item/piece', 7, 'default-brg.png'),
+('BRG-039', '45670', 'sox 3/4\'', 2000, 5000, 121, 'item/piece', 7, 'default-brg.png'),
 ('BRG-040', '45231', 'sox 1/4\'', 2500, 7000, 100, 'item/piece', 7, 'default-brg.png'),
-('BRG-041', '09324', 'sox 1\'', 3500, 8000, 97, 'item/piece', 7, 'default-brg.png'),
+('BRG-041', '09324', 'sox 1\'', 3500, 8000, 119, 'item/piece', 7, 'default-brg.png'),
 ('BRG-042', '79034', 'sox 1 1/2\'', 5000, 10000, 100, 'item/piece', 7, 'default-brg.png'),
-('BRG-043', '36474', 'sox 1 1/4\'', 7000, 12000, 100, 'item/piece', 7, 'default-brg.png'),
+('BRG-043', '36474', 'sox 1 1/4\'', 7000, 12000, 79, 'item/piece', 7, 'default-brg.png'),
 ('BRG-044', '81250', 'sox 2\'', 13000, 16000, 120, 'item/piece', 7, 'default-brg.png'),
-('BRG-045', '45687', 'sox 2 1/2\'', 13000, 18000, 100, 'item/piece', 7, 'default-brg.png'),
-('BRG-046', '10235', 'sox 3\'', 15000, 20500, 97, 'item/piece', 7, 'default-brg.png'),
-('BRG-047', '34520', 'sox 4\'', 2000, 25000, 97, 'item/piece', 7, 'default-brg.png'),
+('BRG-045', '45687', 'sox 2 1/2\'', 13000, 18000, 98, 'item/piece', 7, 'default-brg.png'),
+('BRG-046', '10235', 'sox 3\'', 15000, 20500, 310, 'item/piece', 7, 'default-brg.png'),
+('BRG-047', '34520', 'sox 4\'', 2000, 25000, 119, 'item/piece', 7, 'default-brg.png'),
 ('BRG-048', '90213', 'vlok sox 1/4\'x 1/2\'', 5000, 6000, 100, 'item/piece', 7, 'default-brg.png'),
-('BRG-049', '589021', 'vlok sox 1/4\' x 3/4\'', 3000, 5000, 100, 'item/piece', 7, 'default-brg.png'),
-('BRG-050', '10654', 'vlok sox 1/4\' x 1\'', 5000, 10000, 120, 'item/piece', 7, 'default-brg.png'),
+('BRG-049', '589021', 'vlok sox 1/4\' x 3/4\'', 3000, 5000, 99, 'item/piece', 7, 'default-brg.png'),
+('BRG-050', '10654', 'vlok sox 1/4\' x 1\'', 5000, 10000, 150, 'item/piece', 7, 'default-brg.png'),
 ('BRG-051', '53410', 'vlok sox 1/4\'x 1 1/4\'', 10000, 12000, 98, 'item/piece', 7, 'default-brg.png'),
-('BRG-052', '98120', 'vlok sox 1/2\' x 3/4\'', 10000, 13000, 120, 'item/piece', 7, 'default-brg.png'),
-('BRG-053', '3128440', 'vlok sox 1/2\'x1 1/4\'', 9000, 14000, 100, 'item/piece', 7, 'default-brg.png'),
-('BRG-054', '97394198', 'vlok sox 1/2\'x1 1/2\'', 11000, 15000, 100, 'item/piece', 7, 'default-brg.png'),
-('BRG-055', '349128390', 'vlok sox 1/2\'x2\'', 12000, 17000, 100, 'item/piece', 7, 'default-brg.png'),
-('BRG-056', '3092180', 'vlok sox 3/4\'x1\'', 9000, 15000, 100, 'item/piece', 7, 'default-brg.png'),
-('BRG-057', '8882372', 'mousee', 300000, 355000, 0, 'item/piece', 10, 'default-brg.png');
+('BRG-052', '98120', 'vlok sox 1/2\' x 3/4\'', 10000, 13000, 150, 'item/piece', 7, 'default-brg.png'),
+('BRG-053', '3128440', 'vlok sox 1/2\'x1 1/4\'', 9000, 14000, 258, 'item/piece', 7, 'default-brg.png'),
+('BRG-054', '97394198', 'vlok sox 1/2\'x1 1/2\'', 11000, 15000, 88, 'item/piece', 7, 'default-brg.png'),
+('BRG-055', '349128390', 'vlok sox 1/2\'x2\'', 12000, 17000, 130, 'item/piece', 7, 'default-brg.png'),
+('BRG-056', '3092180', 'vlok sox 3/4\'x1\'', 9000, 15000, 100, 'item/piece', 7, 'default-brg.png');
 
 -- --------------------------------------------------------
 
@@ -126,16 +125,16 @@ CREATE TABLE `beli_detail` (
 --
 
 INSERT INTO `beli_detail` (`id`, `no_beli`, `tgl_beli`, `kode_brg`, `nama_brg`, `qty`, `harga_beli`, `jml_harga`, `suplier`, `supplier_name`) VALUES
-(148, 'PB0001', '2025-05-28', 'BRG-004', 'hollow 4x2', 100, 45000, 4500000, '21', 'PT INDOMAR'),
-(149, 'PB0002', '2025-05-28', 'BRG-002', 'semen', 30, 8000, 240000, '23', 'PT SEMEN JAYA ABADI'),
-(150, 'PB0003', '2025-05-28', 'BRG-018', 'paku beton 10cm', 200, 500, 100000, '24', 'PT PAKU'),
-(151, 'PB0003', '2025-05-28', 'BRG-017', 'paku beton 7cm', 200, 350, 70000, '24', 'PT PAKU'),
-(152, 'PB0003', '2025-05-28', 'BRG-010', 'paku 10cm', 200, 18000, 3600000, '24', 'PT PAKU'),
-(153, 'PB0001', '2025-05-28', 'BRG-007', 'hollow 4x4', 100, 56000, 5600000, '21', 'PT INDOMAR'),
-(154, 'PB0004', '2025-05-28', 'BRG-022', 'knee 1 1/2\'', 50, 5000, 250000, '25', 'PT KNEE'),
-(155, 'PB0004', '2025-05-28', 'BRG-023', 'knee 1 1/4\'', 50, 7000, 350000, '25', 'PT KNEE'),
-(156, 'PB0004', '2025-05-28', 'BRG-021', 'knee 1\'', 50, 3500, 175000, '25', 'PT KNEE'),
-(157, 'PB0004', '2025-05-28', 'BRG-019', 'knee 1/2\'', 50, 1500, 75000, '25', 'PT KNEE');
+(175, 'PB0001', '2025-05-29', 'BRG-005', 'pasir', 230, 260000, 59800000, '28', 'SUPPLIER PASIR'),
+(176, 'PB0002', '2025-05-29', 'BRG-008', 'paku 3cm', 250, 13000, 3250000, '24', 'PT PAKU'),
+(177, 'PB0002', '2025-05-29', 'BRG-013', 'paku payung 7cm', 178, 15000, 2670000, '24', 'PT PAKU'),
+(178, 'PB0002', '2025-05-29', 'BRG-015', 'paku beton 3cm', 189, 150, 28350, '24', 'PT PAKU'),
+(179, 'PB0003', '2025-05-29', 'BRG-002', 'semen', 223, 8000, 1784000, '23', 'PT SEMEN JAYA ABADI'),
+(180, 'PB0004', '2025-05-29', 'BRG-034', 'tee 2\'', 223, 9000, 2007000, '22', 'PT TEE'),
+(181, 'PB0005', '2025-05-29', 'BRG-046', 'sox 3\'', 213, 15000, 3195000, '26', 'PT SOX'),
+(182, 'PB0002', '2025-05-29', 'BRG-009', 'paku 7cm', 201, 12000, 2412000, '24', 'PT PAKU'),
+(183, 'PB0006', '2025-05-29', 'BRG-053', 'vlok sox 1/2\'x1 1/4\'', 270, 9000, 2430000, '27', 'PT VLOK SOX'),
+(184, 'PB0007', '2025-05-29', 'BRG-003', 'lem tembak', 279, 10000, 2790000, '21', 'PT INDOMAR');
 
 -- --------------------------------------------------------
 
@@ -156,10 +155,13 @@ CREATE TABLE `beli_head` (
 --
 
 INSERT INTO `beli_head` (`no_beli`, `tgl_beli`, `suplier`, `total`, `keterangan`) VALUES
-('PB0001', '2025-05-28', '21', 10100000, ''),
-('PB0002', '2025-05-28', '23', 240000, ''),
-('PB0003', '2025-05-28', '24', 3770000, ''),
-('PB0004', '2025-05-28', '25', 850000, '');
+('PB0001', '2025-05-29', '28', 59800000, ''),
+('PB0002', '2025-05-29', '24', 8360350, ''),
+('PB0003', '2025-05-29', '23', 1784000, ''),
+('PB0004', '2025-05-29', '22', 2007000, ''),
+('PB0005', '2025-05-29', '26', 3195000, ''),
+('PB0006', '2025-05-29', '27', 2430000, ''),
+('PB0007', '2025-05-29', '21', 2790000, '');
 
 -- --------------------------------------------------------
 
@@ -209,36 +211,37 @@ CREATE TABLE `jual_detail` (
 --
 
 INSERT INTO `jual_detail` (`id`, `no_jual`, `tgl_jual`, `barcode`, `nama_brg`, `qty`, `harga_jual`, `jml_harga`) VALUES
-(12, 'PJ0002', '2025-05-07', '01', 'Paku', 1, 12000, 12000),
-(29, 'PJ0001', '2025-05-18', '01', 'paku 5cm', 1, 12000, 12000),
-(30, 'PJ0001', '2025-05-18', '02', 'semen', 12, 10000, 120000),
-(31, 'PJ0002', '2025-05-18', '40138429', 'lem tembak', 1, 15000, 15000),
-(33, 'PJ0002', '2025-05-18', '94815209', 'batu split', 1, 340000, 340000),
-(34, 'PJ0002', '2025-06-07', '02', 'semen', 9, 10000, 90000),
-(35, 'PJ0003', '2025-05-19', '01', 'paku 5cm', 1, 12000, 12000),
-(38, 'PJ0004', '2025-05-22', '02', 'semen', 1, 10000, 10000),
-(40, 'PJ0005', '2025-05-22', '76543', 'tee 1\'', 1, 6000, 6000),
-(41, 'PJ0005', '2025-05-22', '657890', 'tee 2\'', 1, 12000, 12000),
-(42, 'PJ0006', '2025-05-23', '657890', 'tee 2\'', 2, 12000, 24000),
-(43, 'PJ0006', '2025-05-23', '94815209', 'batu split', 3, 340000, 1020000),
-(44, 'PJ0006', '2025-05-23', '480321402', 'paku beton 3cm', 3, 300, 900),
-(45, 'PJ0006', '2025-05-23', '10235', 'sox 3\'', 3, 20500, 61500),
-(46, 'PJ0007', '2025-05-23', '01', 'paku 5cm', 1, 12000, 12000),
-(47, 'PJ0008', '2025-05-23', '02', 'semen', 1, 10000, 10000),
-(48, 'PJ0009', '2025-05-23', '02', 'semen', 1, 10000, 10000),
-(49, 'PJ0010', '2025-05-23', '45670', 'sox 3/4\'', 1, 5000, 5000),
-(50, 'PJ0011', '2025-05-23', '01', 'paku 5cm', 1, 12000, 12000),
-(51, 'PJ0012', '2025-05-23', '08051342842', 'paku 10cm', 2, 25000, 50000),
-(52, 'PJ0013', '2025-05-23', '40138429', 'lem tembak', 1, 15000, 15000),
-(53, 'PJ0014', '2025-05-23', '09321432', 'paku 7cm', 1, 20000, 20000),
-(54, 'PJ0015', '2025-05-23', '30218002', 'paku 12cm', 1, 30000, 30000),
-(55, 'PJ0016', '2025-05-23', '53410', 'vlok sox 1/4\'x 1 1/4\'', 2, 12000, 24000),
-(56, 'PJ0017', '2025-05-23', '09324', 'sox 1\'', 3, 8000, 24000),
-(57, 'PJ0018', '2025-05-23', '132094801', 'paku gypsum', 2, 30000, 60000),
-(58, 'PJ0019', '2025-05-23', '34520', 'sox 4\'', 3, 25000, 75000),
-(59, 'PJ0019', '2025-05-23', '40138429', 'lem tembak', 2, 15000, 30000),
-(60, 'PJ0020', '2025-05-23', '94815209', 'batu split', 2, 340000, 680000),
-(61, 'PJ0020', '2025-05-23', '849132809', 'paku payung 7cm', 3, 28000, 84000);
+(68, 'PJ0001', '2025-05-29', '953428510', 'pasir', 1, 300000, 300000),
+(69, 'PJ0001', '2025-05-29', '08051342842', 'paku 10cm', 45, 25000, 1125000),
+(70, 'PJ0001', '2025-05-29', '51203480', 'paku 3cm', 100, 20000, 2000000),
+(71, 'PJ0001', '2025-05-29', '321480890', 'knee 1/2\'', 20, 3000, 60000),
+(72, 'PJ0001', '2025-05-29', '02', 'semen', 120, 10000, 1200000),
+(74, 'PJ0001', '2025-05-29', '94815209', 'batu split', 30, 340000, 10200000),
+(75, 'PJ0001', '2025-05-29', '657890', 'tee 2\'', 20, 12000, 240000),
+(76, 'PJ0002', '2025-05-30', '02', 'semen', 2, 10000, 20000),
+(77, 'PJ0002', '2025-05-30', '0591231943', 'hollow 4x4', 5, 80000, 400000),
+(78, 'PJ0002', '2025-05-30', '132094801', 'paku gypsum', 20, 30000, 600000),
+(79, 'PJ0003', '2025-05-29', '4908123', 'paku payung 5cm', 3, 28000, 84000),
+(80, 'PJ0003', '2025-05-29', '45687', 'sox 2 1/2\'', 2, 18000, 36000),
+(81, 'PJ0003', '2025-05-29', '29418914', 'hollow 4x2', 1, 70000, 70000),
+(82, 'PJ0003', '2025-05-29', '02', 'semen', 3, 10000, 30000),
+(83, 'PJ0004', '2025-06-06', '94815209', 'batu split', 1, 340000, 340000),
+(84, 'PJ0004', '2025-06-06', '953428510', 'pasir', 4, 300000, 1200000),
+(85, 'PJ0004', '2025-06-06', '02', 'semen', 5, 10000, 50000),
+(86, 'PJ0004', '2025-06-06', '30218002', 'paku 12cm', 12, 30000, 360000),
+(87, 'PJ0004', '2025-06-06', '97394198', 'vlok sox 1/2\'x1 1/2\'', 42, 15000, 630000),
+(88, 'PJ0004', '2025-06-06', '36474', 'sox 1 1/4\'', 21, 12000, 252000),
+(89, 'PJ0005', '2025-05-29', '01', 'paku 5cm', 2, 12000, 24000),
+(90, 'PJ0006', '2025-05-29', '35210840932', 'paku beton 7cm', 64, 700, 44800),
+(91, 'PJ0007', '2025-05-29', '953428510', 'pasir', 1, 300000, 300000),
+(92, 'PJ0007', '2025-05-29', '09321432', 'paku 7cm', 1, 20000, 20000),
+(93, 'PJ0007', '2025-05-29', '4908123', 'paku payung 5cm', 1, 28000, 28000),
+(94, 'PJ0007', '2025-05-29', '30218002', 'paku 12cm', 1, 30000, 30000),
+(95, 'PJ0007', '2025-05-29', '589021', 'vlok sox 1/4\' x 3/4\'', 1, 5000, 5000),
+(96, 'PJ0007', '2025-05-29', '34219', 'tee 3\'', 1, 15000, 15000),
+(97, 'PJ0007', '2025-05-10', '40138429', 'lem tembak', 1, 15000, 15000),
+(98, 'PJ0007', '2025-05-07', '08051342842', 'paku 10cm', 1, 25000, 25000),
+(99, 'PJ0008', '2025-05-29', '3128440', 'vlok sox 1/2\'x1 1/4\'', 142, 14000, 1988000);
 
 -- --------------------------------------------------------
 
@@ -253,35 +256,22 @@ CREATE TABLE `jual_head` (
   `total` int(11) NOT NULL,
   `keterangan` varchar(255) NOT NULL,
   `jml_bayar` int(11) NOT NULL,
-  `kembalian` int(11) NOT NULL,
-  `bayar` double DEFAULT NULL
+  `kembalian` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data untuk tabel `jual_head`
 --
 
-INSERT INTO `jual_head` (`no_jual`, `tgl_jual`, `customer`, `total`, `keterangan`, `jml_bayar`, `kembalian`, `bayar`) VALUES
-('PJ0001', '2025-05-18', 'iban', 132000, '', 300000, 168000, NULL),
-('PJ0002', '2025-06-07', 'akram', 457000, '', 500000, 43000, NULL),
-('PJ0003', '2025-05-19', 'abar', 12000, '', 15000, 3000, NULL),
-('PJ0004', '2025-05-22', 'abar', 10000, '', 12000, 2000, NULL),
-('PJ0005', '2025-05-22', 'akram', 18000, '', 29000, 11000, NULL),
-('PJ0006', '2025-05-23', 'sandy', 1106400, '', 1123000, 16600, NULL),
-('PJ0007', '2025-05-23', 'sandy', 12000, '', 12000, 0, NULL),
-('PJ0008', '2025-05-23', 'abar', 10000, '', 12000, 2000, NULL),
-('PJ0009', '2025-05-23', 'sandy', 10000, '', 12000, 2000, NULL),
-('PJ0010', '2025-05-23', 'sandy', 5000, '', 5011, 11, NULL),
-('PJ0011', '2025-05-23', 'adam', 12000, '', 14000, 2000, NULL),
-('PJ0012', '2025-05-23', 'sandy', 50000, '', 59000, 9000, NULL),
-('PJ0013', '2025-05-23', 'syech', 15000, '', 20000, 5000, NULL),
-('PJ0014', '2025-05-23', 'customer TB Mutiara', 20000, '', 21000, 1000, NULL),
-('PJ0015', '2025-05-23', 'customer TB Mutiara', 30000, '', 34000, 4000, NULL),
-('PJ0016', '2025-05-23', 'customer TB Mutiara', 24000, '', 40000, 16000, NULL),
-('PJ0017', '2025-05-23', 'customer TB Mutiara', 24000, 'belum di antar', 40000, 16000, NULL),
-('PJ0018', '2025-05-23', 'customer TB Mutiara', 60000, 'jl.serua 5 deket ibu ida', 70000, 10000, NULL),
-('PJ0019', '2025-05-23', 'customer TB Mutiara', 105000, 'di antar ke rt sebelah deket warung madura ibu anam', 120000, 15000, NULL),
-('PJ0020', '2025-05-23', 'customer TB Mutiara', 764000, '', 800000, 36000, NULL);
+INSERT INTO `jual_head` (`no_jual`, `tgl_jual`, `customer`, `total`, `keterangan`, `jml_bayar`, `kembalian`) VALUES
+('PJ0001', '2025-05-29', 'customer TB Mutiara', 15125000, '', 20000000, 4875000),
+('PJ0002', '2025-05-30', 'customer TB Mutiara', 1020000, '', 1200000, 180000),
+('PJ0003', '2025-05-29', 'customer TB Mutiara', 220000, '', 220000, 0),
+('PJ0004', '2025-06-06', 'customer TB Mutiara', 2832000, '', 2900000, 68000),
+('PJ0005', '2025-05-29', 'customer TB Mutiara', 24000, '', 27222, 3222),
+('PJ0006', '2025-05-29', 'customer TB Mutiara', 44800, '', 80000, 35200),
+('PJ0007', '2025-05-07', 'customer TB Mutiara', 438000, '', 500000, 62000),
+('PJ0008', '2025-05-29', 'sandy', 1988000, '', 2000000, 12000);
 
 -- --------------------------------------------------------
 
@@ -302,11 +292,14 @@ CREATE TABLE `produk_supplier` (
 INSERT INTO `produk_supplier` (`id_produk_supplier`, `id_supplier`, `id_barang`) VALUES
 (13, 20, 'BRG-006'),
 (25, 20, 'BRG-016'),
+(70, 21, 'BRG-003'),
 (14, 21, 'BRG-004'),
 (15, 21, 'BRG-007'),
 (18, 22, 'BRG-028'),
 (19, 22, 'BRG-029'),
 (17, 22, 'BRG-031'),
+(67, 22, 'BRG-032'),
+(68, 22, 'BRG-033'),
 (21, 22, 'BRG-034'),
 (20, 22, 'BRG-035'),
 (22, 22, 'BRG-036'),
@@ -351,7 +344,8 @@ INSERT INTO `produk_supplier` (`id_produk_supplier`, `id_supplier`, `id_barang`)
 (60, 27, 'BRG-053'),
 (59, 27, 'BRG-054'),
 (61, 27, 'BRG-055'),
-(66, 27, 'BRG-056');
+(66, 27, 'BRG-056'),
+(69, 28, 'BRG-005');
 
 -- --------------------------------------------------------
 
@@ -374,12 +368,13 @@ CREATE TABLE `supplier` (
 INSERT INTO `supplier` (`id_supplier`, `nama`, `telp`, `deskripsi`, `alamat`) VALUES
 (20, 'PT POCO', '454545454', 'mantap produknya', 'gdgdrgdsdsrfsef'),
 (21, 'PT INDOMAR', '343435755', 'Kureng nih produknya', 'jalan mangga'),
-(22, 'PT DOGER', '563788823', 'ajib', 'Jl. Doger 2'),
+(22, 'PT TEE', '563788823', 'ajib', 'Jl. tee 2'),
 (23, 'PT SEMEN JAYA ABADI', '76768786786', 'produk semen setia', 'jl.semen jaya'),
 (24, 'PT PAKU', '9914885343453', 'banyak pakunya disini', 'jalan paku lima delima'),
 (25, 'PT KNEE', '081234566778', 'knee terbaik', 'jalan knee 5'),
 (26, 'PT SOX', '08123456634', 'sox 123 jaya', 'jalan sox 5 6 7'),
-(27, 'PT VLOK SOX', '08294266423', 'volk sox jaya abadiii', 'jl vlox sox');
+(27, 'PT VLOK SOX', '08294266423', 'volk sox jaya abadiii', 'jl vlox sox'),
+(28, 'SUPPLIER PASIR', '652872321', 'supplier pasir ', 'jlraya bojonglali');
 
 -- --------------------------------------------------------
 
@@ -420,7 +415,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `username`, `fullname`, `password`, `alamat`, `level`, `foto`) VALUES
-(15, 'admin', 'test admin', '$2y$10$gycL9VPOc1zCQDEiX9TagubpFqe6yGyMZC4Ga9ekIirrdS01Cwiwi', 'mana aja', 1, 'default-icon-user.jpg'),
+(15, 'admin', 'test admin', '$2y$10$e3djMHFE9WMoHk8Cj.1FzugGG0rpyQqKQj8GVtC7raRIJNJK/0Hbe', 'mana aja', 1, '312-admin.png'),
 (18, 'kasir', 'kasir2', '$2y$10$rg.Q.4.bUzRJho0ypQcj7.QWTgyHxpawMcbPUe75J7Su8Q0oiMNj6', 'jjj', 3, 'default-icon-user.jpg'),
 (19, 'owner', 'owner2', '$2y$10$SRJEcJkSldMtphbwsyJhh.co/pIu3OcNZzk33aHHMyf6c6zLgl6r2', 'ddawawd', 2, 'default-icon-user.jpg'),
 (21, 'karyawan', 'kar1', '$2y$10$g1VcKHQWXkK9U9/zZO0xJOs2GF1bMFJ5XI1SgXXDZbF0idhyStAtO', 'daawdawd', 4, 'default-icon-user.jpg');
@@ -499,7 +494,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT untuk tabel `beli_detail`
 --
 ALTER TABLE `beli_detail`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=159;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=186;
 
 --
 -- AUTO_INCREMENT untuk tabel `customer`
@@ -511,19 +506,19 @@ ALTER TABLE `customer`
 -- AUTO_INCREMENT untuk tabel `jual_detail`
 --
 ALTER TABLE `jual_detail`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
 
 --
 -- AUTO_INCREMENT untuk tabel `produk_supplier`
 --
 ALTER TABLE `produk_supplier`
-  MODIFY `id_produk_supplier` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
+  MODIFY `id_produk_supplier` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
 
 --
 -- AUTO_INCREMENT untuk tabel `supplier`
 --
 ALTER TABLE `supplier`
-  MODIFY `id_supplier` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id_supplier` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT untuk tabel `users`
