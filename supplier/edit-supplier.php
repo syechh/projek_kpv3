@@ -142,11 +142,17 @@ if(isset($_GET['hapus_produk'])){
                     <div class="input-group mb-2 produk-item">
                       <input type="text" class="form-control form-control-sm" value="<?= $produkInfo['nama_barang'] ?>" readonly>
                       <div class="input-group-append">
-                        <a href="?id=<?= $id ?>&hapus_produk=<?= $ps['id_barang'] ?>" 
-                           class="btn btn-danger btn-sm" 
-                           onclick="return confirm('Hapus <?= $produkInfo['nama_barang'] ?> dari daftar produk supplier?')">
+                        <a href="#" 
+                          class="btn btn-sm btn-danger btn-delete-produk" 
+                          data-id="<?= $ps['id_barang'] ?>" 
+                          data-nama="<?= htmlspecialchars($produkInfo['nama_barang']) ?>" 
+                          data-idparent="<?= $id ?>" 
+                          data-toggle="modal" 
+                          data-target="#modalDeleteProduk" 
+                          title="Hapus Produk">
                           <i class="fas fa-trash"></i>
                         </a>
+
                       </div>
                     </div>
                     <?php 
@@ -197,6 +203,28 @@ if(isset($_GET['hapus_produk'])){
   </section>
 </div>
 
+<!-- modal alert menghapus produk barang -->
+<div class="modal fade" id="modalDeleteProduk" tabindex="-1" role="dialog" aria-labelledby="modalDeleteProdukLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+    <div class="modal-content bg-danger">
+      <div class="modal-header">
+        <h5 class="modal-title text-white">Konfirmasi Hapus</h5>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-white">
+        <p>Yakin mau hapus <strong id="namaProduk"></strong> dari daftar supplier?</p>
+      </div>
+      <div class="modal-footer justify-content-between">
+        <button type="button" class="btn btn-outline-light" data-dismiss="modal">Batal</button>
+        <a href="#" class="btn btn-light" id="btnConfirmDeleteProduk">Hapus</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   // Validasi sebelum submit form
@@ -210,6 +238,18 @@ document.addEventListener('DOMContentLoaded', function() {
     return true;
   });
 });
+
+  //script modal alert hapus produk
+  $(document).ready(function () {
+    $('.btn-delete-produk').on('click', function () {
+      const idProduk = $(this).data('id');
+      const namaProduk = $(this).data('nama');
+      const idParent = $(this).data('idparent'); // dari parameter `id=...`
+
+      $('#namaProduk').text(namaProduk);
+      $('#btnConfirmDeleteProduk').attr('href', '?id=' + idParent + '&hapus_produk=' + idProduk);
+    });
+  });
 </script>
 
 <?php
