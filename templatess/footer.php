@@ -67,6 +67,19 @@
     updateDarkMode(isDark);
   });
 
+   // Saat halaman akan ditutup atau di-refresh, simpan posisi scroll-nya
+  window.addEventListener("beforeunload", function () {
+    localStorage.setItem("scrollPosition", window.scrollY);
+  });
+
+  // Saat halaman selesai dimuat, kembalikan posisi scroll-nya
+  window.addEventListener("load", function () {
+    const scrollPosition = localStorage.getItem("scrollPosition");
+    if (scrollPosition !== null) {
+      window.scrollTo(0, parseInt(scrollPosition));
+    }
+  });
+
 </script>
 
 </body>
