@@ -27,9 +27,9 @@
   <link rel="shortcut icon" href="<?php echo $main_url ?>assets/images/cart.png">
 </head> 
 <style>
-  body {
+  /* body {
   transition: background-color 0.3s, color 0.3s;
-  }
+  } */
 
   body.dark-mode {
     background-color: #121212;
