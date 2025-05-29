@@ -118,7 +118,18 @@ if($msg == 'updated'){
                                         <td>
                                             <button type="button" class="btn btn-sm btn-secondary" id="btnCetakBarcode" data-barcode="<?= $brg['barcode'] ?>" data-nama="<?= $brg['nama_barang'] ?>" title="cetak barcode"><i class="fas fa-barcode"></i></button>
                                             <a href="form-barang.php?id=<?= $brg['id_barang'] ?>&msg=editing" class="btn btn-warning btn-sm" title="Edit barang" ><i class="fas fa-pen"></i></a>
-                                            <a href="?id=<?= $brg['id_barang'] ?>&gbr=<?= $brg['gambar'] ?>&msg=deleted" class="btn btn-danger btn-sm" title="Hapus barang" onclick="return confirm('Anda yakin akan menghapus barang ini?')"><i class="fas fa-trash"></i></a>
+                                            <a href="#" 
+                                                class="btn btn-sm btn-danger btn-delete-barang" 
+                                                data-id="<?= $brg['id_barang'] ?>" 
+                                                data-gambar="<?= $brg['gambar'] ?>" 
+                                                data-nama="<?= htmlspecialchars($brg['nama_barang']) ?>" 
+                                                data-toggle="modal" 
+                                                data-target="#modalDeleteBarang" 
+                                                title="Hapus Barang">
+                                                <i class="fas fa-trash"></i>
+                                            </a>
+
+
                                         </td>
                                     </tr>
 
@@ -132,6 +143,7 @@ if($msg == 'updated'){
         </div>
     </section>
 
+    <!-- modal cetak barcode -->
     <div class="modal fade" id="mdlCetakBarcode">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -166,10 +178,30 @@ if($msg == 'updated'){
               <button type="button" class="btn btn-primary" id="preview"><i class="fas fa-print"></i> Cetak</button>
             </div>
           </div>
-          <!-- /.modal-content -->
         </div>
-        <!-- /.modal-dialog -->
       </div>
+
+      <!-- modal hapus barang  -->
+       <div class="modal fade" id="modalDeleteBarang" tabindex="-1" role="dialog" aria-labelledby="modalDeleteBarangLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+                <div class="modal-content bg-danger animate__animated animate__zoomIn">
+                <div class="modal-header">
+                    <h5 class="modal-title text-white">Konfirmasi Hapus</h5>
+                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-white">
+                    <p>Yakin mau hapus barang <strong id="namaBarang"></strong>?</p>
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-outline-light" data-dismiss="modal">Batal</button>
+                    <a href="#" class="btn btn-light" id="btnConfirmDeleteBarang">Hapus</a>
+                </div>
+                </div>
+            </div>
+        </div>
+
 
       <script>
         $(document).ready(function(){
@@ -191,6 +223,18 @@ if($msg == 'updated'){
                 }
             })
         })
+
+        $(document).ready(function () {
+            $('.btn-delete-barang').on('click', function () {
+            const idBarang = $(this).data('id');
+            const namaBarang = $(this).data('nama');
+            const gambar = $(this).data('gambar');
+
+            $('#namaBarang').text(namaBarang);
+            $('#btnConfirmDeleteBarang').attr('href', '?id=' + idBarang + '&gbr=' + gambar + '&msg=deleted');
+            });
+        });
+
       </script>
 
 </div>
