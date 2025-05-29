@@ -8,7 +8,7 @@
 <footer class="main-footer">
   <strong>Copyright &copy; 2025 <span class="text-info">TB-MUTIARA</span></strong>. All rights reserved.
   <div class="float-right d-none d-sm-inline-block">
-    <b>Version</b> 6.2.4
+    <b>Version</b> 6.8.2
   </div>
 </footer>
 
