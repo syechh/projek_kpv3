@@ -98,11 +98,11 @@ if(isset($_POST['simpan'])){
                 </div>
                 <div class="form-group">
                   <label for="ketr">Deskripsi *</label>
-                  <textarea name="ketr" id="ketr" rows="1" class="form-control" placeholder="Keterangan Supplier" required></textarea>
+                  <textarea name="ketr" id="ketr" rows="1" class="form-control" placeholder="Keterangan Supplier"></textarea>
                 </div>
                 <div class="form-group">
                   <label for="alamat">Alamat *</label>
-                  <textarea name="alamat" id="alamat" rows="3" class="form-control" placeholder="Alamat Supplier" required></textarea>
+                  <textarea name="alamat" id="alamat" rows="3" class="form-control" placeholder="Alamat Supplier"></textarea>
                 </div>
               </div>
               

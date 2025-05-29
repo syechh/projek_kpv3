@@ -118,12 +118,12 @@ if(isset($_GET['hapus_produk'])){
                 <div class="form-group">
                   <label for="ketr">Deskripsi *</label>
                   <textarea name="ketr" id="ketr" rows="1" class="form-control" 
-                            placeholder="Keterangan Supplier" required><?= $supplier['deskripsi'] ?></textarea>
+                            placeholder="Keterangan Supplier"><?= $supplier['deskripsi'] ?></textarea>
                 </div>
                 <div class="form-group">
                   <label for="alamat">Alamat *</label>
                   <textarea name="alamat" id="alamat" rows="3" class="form-control" 
-                            placeholder="Alamat Supplier" required><?= $supplier['alamat'] ?></textarea>
+                            placeholder="Alamat Supplier"><?= $supplier['alamat'] ?></textarea>
                 </div>
               </div>
               
