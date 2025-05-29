@@ -235,6 +235,7 @@ $totals = array_map('intval', array_column($penjualanData, 'total_harian'));
                   </div>
                 </div>
               </div>
+              <div class="col-md-4"></div>
             </div>
           </div>
         </section>
