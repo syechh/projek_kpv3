@@ -154,7 +154,17 @@ if($msg == 'aborted'){
                                     <td><?= $produkList ?></td>
                                     <td>
                                         <a href="edit-supplier.php?id=<?= $supplier['id_supplier'] ?>" class="btn btn-sm btn-warning" title="Edit Supplier"><i class="fas fa-pen"></i></a>
-                                        <a href="del-supplier.php?id=<?= $supplier['id_supplier'] ?>" class="btn btn-sm btn-danger" title="Hapus Supplier" onclick="return confirm('Anda yakin akan menghapus supplier ini?')"><i class="fas fa-trash"></i></a>
+                                        <!-- Tombol hapus trigger modal -->
+                                        <a href="#" 
+                                          class="btn btn-sm btn-danger btn-delete-supplier" 
+                                          data-id="<?= $supplier['id_supplier'] ?>" 
+                                          data-nama="<?= htmlspecialchars($supplier['nama']) ?>" 
+                                          data-toggle="modal" 
+                                          data-target="#modalDeleteSupplier" 
+                                          title="Hapus Supplier">
+                                          <i class="fas fa-trash"></i>
+                                        </a>
+
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
@@ -165,6 +175,41 @@ if($msg == 'aborted'){
         </div>
     </section>
 </div>
+
+<!-- Modal Konfirmasi Hapus Supplier -->
+<div class="modal fade" id="modalDeleteSupplier" tabindex="-1" role="dialog" aria-labelledby="modalDeleteSupplierLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+    <div class="modal-content bg-danger">
+      <div class="modal-header">
+        <h5 class="modal-title text-white">Konfirmasi Hapus</h5>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-white">
+        <p>Yakin mau hapus supplier <strong id="namaSupplier"></strong>?</p>
+      </div>
+      <div class="modal-footer justify-content-between">
+        <button type="button" class="btn btn-outline-light" data-dismiss="modal">Batal</button>
+        <a href="#" class="btn btn-light" id="btnConfirmDelete">Hapus</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  //script untuk modal
+  $(document).ready(function () {
+    $('.btn-delete-supplier').on('click', function () {
+      const id = $(this).data('id');
+      const nama = $(this).data('nama');
+      
+      $('#namaSupplier').text(nama);
+      $('#btnConfirmDelete').attr('href', 'del-supplier.php?id=' + id);
+    });
+  });
+</script>
+
 
 <?php
 require "../templatess/footer.php";
